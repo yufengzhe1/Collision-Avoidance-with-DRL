@@ -8,16 +8,16 @@ Decentralized Non-communicating Multiagent Collision Avoidance with Deep Reinfor
 
 ## 2. training the model
   CADRL算法，利用神经网络来估计状态值函数，将连续的动作离散化为35个可选的动作空间，通过最大化 即时奖励与下一个状态的价值和 来选取下一个动作。CADRL引入了价值网络（value network），该价值网络利用agent自身状态与其相邻agent的联合状态来训练模型。CADRL包含两部分，Deep V-Learning训练模型，CADRL利用训练好的模型进行防碰撞路径规划。
-### >>> 2.1 reward
+### >>>2.1 reward
   奖励函数的设计。由于是两个物体防碰撞路径规划情景，奖励函数设计成距离越远奖励越大，到达目的地奖励为1，彭改装奖励为-0.25，其他情况根据距离远近奖励范围在（-0.2，-0.1）。
 
-### >>> 2.2 Deep V-Learning（training the value network）
-  算法输入：ORCA生成的轨迹集
+### >>>2.2 Deep V-Learning（training the value network）
+  算法输入：ORCA生成的轨迹集  
   算法输出：value network
   
   首先，将输入的轨迹集处理成“状态-价值”对，初始化value network，并将其复制一份；然后在每一次迭代训练中利用CADRL算法来最大化 即时奖励与下一个状态的价值和（此时利用的是初始化的value network的复制版本）得到下一个状态值，然后利用新的状态值更新value network；最后输出讲过训练的value network。
   
-### >>> 2.3 CADRL
+### >>>2.3 CADRL
   算法输入：value network，利用value network 生成的model中的参数   
   算法输出：最大化即时奖励与下一状态 所选择的动作，根据所选择的动作生成下一时刻状态。
   
