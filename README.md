@@ -1,7 +1,7 @@
 # Collision-Avoidance-with-DRL
 
 ## 摘要
-利用深度强化学习的方法实现多智能体间离散无交流的障碍避免。其中强化学习算法训练模型所需的数据集由最优互惠碰撞避免(Optimal Reciprocal Collision Avoidance， ORCA)生成。
+利用深度强化学习的方法实现多智能体间离散无交流的障碍避免。其中强化学习算法训练模型所需的数据集由最优互惠碰撞避免(Optimal Reciprocal Collision Avoidance， ORCA)算法生成。
 
 ## 基本原理及代码使用方式
 ### 1. 生成训练数据集
