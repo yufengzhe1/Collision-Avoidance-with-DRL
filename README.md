@@ -9,7 +9,7 @@
 
  ![](https://latex.codecogs.com/gif.latex?v_{new}&space;=&space;argmin&space;||v&space;-&space;v_{opt}||)
 
-其中V(ORCA)速度集合中的元素。
+其中v是v(ORCA)速度集合中的元素。
 
 代码位于ORCA文件夹。
 
