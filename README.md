@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # Collision-Avoidance-with-DRL
 
 ## 摘要
@@ -7,7 +8,7 @@
 ### 1. 生成训练数据集
 利用[ORCA](http://www.meltycriss.com/2017/01/14/paper-orca/)算法生成轨迹数据集。ORCA是经典的分布式底层避障算法，只要每个运动体都采用ORCA算法来进行避障，那么它们之间无需通信，即可分布式的求出每一个运动体的安全速度，而这个速度能确保运动体之间不发生碰撞。也就是说，某一个运动体在自身速度和其他运动体的速度已知的情况下，将在未来 δ 时间内有可能发生碰撞的速度完全排除在外，得到v(ORCA)速度集合,然后在其中选择一个与自身的最优速度最接近的速度
 
- Vnew=argmin||V-Vopt||
+ $$v_{new} = argmin ||v - v_{opt}||$$
 
 其中V(ORCA)速度集合中的元素。
 
@@ -51,19 +52,19 @@ CADRL算法，利用神经网络来估计状态值函数，将连续的动作离
 
 **训练模型**
 
-train model（GPU版本）
+利用GPU训练模型：
 
 ```
 python train.py --config=configs/model.config --gpu
 ```
 
-train model（CPU版本）
+利用CPU训练模型
 
 ```
 python train.py --config=configs/model.config
 ```
                    
-利用matplotlib.pyplot实现训练成果的可视化，可视化程序运行方式
+利用matplotlib.pyplot实现训练成果的可视化，运行方式
 
 ```
 python visualize.py
