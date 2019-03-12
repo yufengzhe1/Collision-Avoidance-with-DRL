@@ -20,7 +20,7 @@
 
 Visualization Video
 
-<img src="ocra.gif" width="300"> 
+<img src="./ORCA/ORCA_demo.gif" width="300"> 
 
 
 ### 3. 训练模型方法
