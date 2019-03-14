@@ -16,7 +16,7 @@
 运行环境：win10+vs2017+openGL库。
 
 ### 2. ORCA算法运行及可视化
-运行orca.cpp即可生成各运动体的轨迹坐标集，并实现避障过程的可视化，ORCA算法可视化效果如下
+运行main.cpp即可生成各运动体的轨迹坐标集，并实现避障过程的可视化，ORCA算法可视化效果如下
 
 **Visualization Video**
 
